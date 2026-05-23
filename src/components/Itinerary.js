@@ -1,7 +1,5 @@
 import React from 'react';
 
-const API = 'https://trip-planner-production-4086.up.railway.app';
-
 const TYPE_EMOJI = {
   adventure: '🏔️',
   nature: '🌿',
