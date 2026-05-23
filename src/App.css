@@ -83,7 +83,7 @@ body {
 .empty { text-align: center; color: #aaa; padding: 40px; }
 .loading { text-align: center; color: #7f8c8d; padding: 40px; }
 
-/* ===== Auth Styles (added) ===== */
+/* ===== Auth Styles ===== */
 .auth-container {
   min-height: 100vh;
   display: flex;
@@ -163,3 +163,23 @@ body {
 .logout-btn:hover {
   background: #c0392b;
 }
+
+/* ===== Itinerary Improvements (added) ===== */
+.itin-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
+.itin-header h2 { color: #2c3e50; margin-bottom: 4px; }
+.itin-weather { color: #7f8c8d; font-size: 0.9rem; }
+
+.budget-section { background: #f8f9fa; border-radius: 10px; padding: 16px; margin-bottom: 20px; }
+.budget-section h3 { margin-bottom: 12px; color: #2c3e50; }
+
+.est-costs { margin-top: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.est-item { display: flex; justify-content: space-between; font-size: 0.9rem; color: #555; background: white; padding: 8px 12px; border-radius: 6px; }
+.est-item span { font-weight: 600; color: #2c3e50; }
+
+.act-left { display: flex; align-items: center; gap: 10px; }
+.act-emoji { font-size: 1.3rem; }
+.activity-cost.free { color: #27ae60; }
+
+.itin-summary { background: #2c3e50; color: white; border-radius: 10px; padding: 16px; margin-top: 20px; }
+.summary-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.summary-note { font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-top: 8px; }
