@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const API = 'https://trip-planner-production-4086.up.railway.app';
 
-function PlanForm({ userId, onResult }) {
+function PlanForm({ userId, token, onResult }) {
   const [query, setQuery] = useState('');
   const [days, setDays] = useState('');
   const [budget, setBudget] = useState('');
@@ -20,7 +20,9 @@ function PlanForm({ userId, onResult }) {
       if (days) body.days = parseInt(days);
       if (budget) body.budget = parseFloat(budget);
       if (preference) body.preferences = [preference];
-      const res = await axios.post(`${API}/plan`, body);
+      const res = await axios.post(`${API}/plan`, body, {
+        headers: { Authorization: `Bearer ${token}` }
+      });
       onResult(res.data);
     } catch (e) {
       setError(e.response?.data?.detail || 'Something went wrong.');

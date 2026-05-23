@@ -3,16 +3,18 @@ import axios from 'axios';
 
 const API = 'http://localhost:8000';
 
-function History({ userId }) {
+function History({ userId, token }) {
   const [trips, setTrips] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get(`${API}/user/${userId}/history`)
+    axios.get(`${API}/user/${userId}/history`, {
+      headers: { Authorization: `Bearer ${token}` }
+    })
       .then(res => setTrips(res.data.trips || []))
       .catch(() => setTrips([]))
       .finally(() => setLoading(false));
-  }, [userId]);
+  }, [userId, token]);
 
   if (loading) return <div className="loading">Loading trips...</div>;
   if (!trips.length) return <div className="empty">No trips yet. Plan your first trip!</div>;

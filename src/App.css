@@ -82,3 +82,84 @@ body {
 .trip-meta { display: flex; gap: 16px; font-size: 0.9rem; color: #7f8c8d; }
 .empty { text-align: center; color: #aaa; padding: 40px; }
 .loading { text-align: center; color: #7f8c8d; padding: 40px; }
+
+/* ===== Auth Styles (added) ===== */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f7fa;
+}
+
+.auth-box {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 420px;
+}
+
+.auth-box h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.auth-subtitle {
+  text-align: center;
+  color: #7f8c8d;
+  margin-bottom: 24px;
+}
+
+.auth-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.auth-tab {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #e0e0e0;
+  background: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #7f8c8d;
+}
+
+.auth-tab.active {
+  border-color: #2980b9;
+  color: #2980b9;
+  font-weight: 600;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.header-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #555;
+}
+
+.logout-btn {
+  padding: 6px 14px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}
